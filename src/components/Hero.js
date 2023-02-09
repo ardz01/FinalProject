@@ -14,7 +14,7 @@ function Hero() {
           <h2 className="text-white text-lg font-light tracking-wide lg:max-w-3xl w-full">
             Whether you’re part of a school club, gaming group, worldwide art
             community, or just a handful of friends that want to spend time
-            together, Discord makes it easy to talk every day and hang out more
+            together, UniBuddy makes it easy to talk every day and hang out more
             often.
           </h2>
           <div className="flex flex-col sm:flex-row md:flex-col lg:flex-row md:items-start sm:items-center gap-6">
@@ -29,12 +29,12 @@ function Hero() {
         </div>
         <div className="flex-grow">
           <img
-            src="https://rb.gy/ohwmdy"
+            src="https://assets-global.website-files.com/5f8dd67f8fdd6f51f0b50904/6169feb513e3a9215c4477e3_External_2021LoginPage_NPC-typing.png"
             alt=""
             className="absolute -left-36 mt-16 sm:-left-44 md:hidden"
           />
           <img
-            src="https://rb.gy/gjs8ch"
+            src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/62a342dbc52104327ccc2ee5_hero.svg"
             alt=""
             className="hidden md:inline absolute"
           />
