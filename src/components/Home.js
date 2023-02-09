@@ -5,8 +5,11 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { auth, db } from "../firebase";
 import { Redirect } from "react-router-dom";
 import { ChevronDownIcon, PlusIcon } from "@heroicons/react/24/outline";
+import { MicrophoneIcon, PhoneIcon, Cog8ToothIcon } from "@heroicons/react/24/solid";
 import Channel from "./Channel";
+import Chat from "../components/Chat";
 import { useCollection } from "react-firebase-hooks/firestore";
+
 
 
 
@@ -27,7 +30,7 @@ function Home() {
 
   return (
     <>
-      {!user && <Redirect to="/channels" />}
+      {!user && <Redirect to="/" />}
       <div className="flex h-screen">
         <div className="flex flex-col space-y-3 bg-[#202225] p-3 min-w-max">
             <div className="server-default hover:bg-discord_purple">
@@ -74,12 +77,37 @@ function Home() {
           </div>
           <div className="bg-[#292b2f] p-2 flex justify-between items-center space-x-8">
             <div className="flex items-center space-x-1">
-           
+            <img
+                src={user?.photoURL}
+                alt=""
+                className="h-10 rounded-full"
+                onClick={() => auth.signOut()}
+              />
+            <h4 className="text-white text-xs font-medium">
+                {user?.displayName}{" "}
+                <span className="text-[#b9bbbe] block">
+                  #{user?.uid.substring(0, 4)}
+                </span>
+              </h4>
+            </div>
 
+            <div className="text-gray-400 flex items-center">
+              <div className="hover:bg-[#3A3C43] p-2 rounded-md">
+                <MicrophoneIcon className="h-5 icon " />
+              </div>
+              <div className="hover:bg-[#3A3C43] p-2 rounded-md">
+                <PhoneIcon className="h-5 icon" />
+              </div>
+              <div className="hover:bg-[#3A3C43] p-2 rounded-md">
+                <Cog8ToothIcon className="h-6 icon" />
+              </div>
             </div>
           </div>
         </div>
-
+        
+        <div className="bg-[#36393f] flex-grow">
+          <Chat />
+        </div>
 
         
       </div>
