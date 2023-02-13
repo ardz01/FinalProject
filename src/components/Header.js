@@ -37,7 +37,7 @@ function Header() {
             className="bg-white p-2 rounded-full text-xs md:text-sm px-4 focus:outline-none hover:shadow-2xl hover:text-discord_blurple transition duration-200 ease-in-out whitespace-nowrap font-medium"
             onClick={!user ? signIn : () => history.push("/channels")}
           >
-            {!user ? "Login" : "Open Discord"}
+            {!user ? "Login" : "Open uniBuddy"}
           </button>
           <Bars3Icon className="h-9 text-white cursor-pointer lg:hidden" />
         </div>
